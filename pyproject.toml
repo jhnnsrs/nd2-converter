@@ -1,0 +1,40 @@
+[project]
+name = "nd2-converter"
+version = "0.1.0"
+description = "Converts Nikon ND2 files into mikro datasets natively, with Nikon's own metadata"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "arkitekt[all]>=13.1.0",
+    "dask[array]>=2026.8.0",
+    "kanne>=2.6.0",
+    "mikro>=12.1.0",
+    # The metadata API (`metadata`, `experiment`, `events`, `frame_metadata`) is typed
+    # but young: pinned to the minor this converter was checked against.
+    "nd2>=0.12,<0.13",
+    "numpy>=2.5.4",
+    "xarray>=2026.9.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+addopts = "-m 'not hub'"
+markers = ["samples: needs the ND2 sample files (ND2_SAMPLES=<dir>)"]
+
+[tool.semantic_release]
+version_variables = ["app.py:__version__"]
+commit_message = "chore(release): {version} [skip ci]"
+tag_format = "v{version}"
+allow_zero_version = true
+
+[tool.semantic_release.branches.release]
+match = "main"
+prerelease = false
+
+[tool.ruff.lint]
+extend-select = ["UP"]
+extend-ignore = ["UP037", "UP038", "UP042", "UP040", "UP046", "UP047", "UP049"]

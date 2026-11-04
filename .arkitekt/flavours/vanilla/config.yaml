@@ -1,0 +1,19 @@
+build_command:
+- docker
+- buildx
+- build
+- --platform
+- '{platform}'
+- '{output}'
+- -t
+- '{tag}'
+- -f
+- '{dockerfile}'
+- .
+capabilities: []
+description: This is a vanilla flavour
+dockerfile: Dockerfile
+platforms:
+- linux/amd64
+- linux/arm64
+selectors: []
