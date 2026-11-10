@@ -2,18 +2,26 @@ version = 1
 revision = 5
 requires-python = ">=3.12"
 resolution-markers = [
-    "python_full_version >= '3.15' and sys_platform == 'win32'",
+    "(python_full_version >= '3.15' and platform_machine == 'AMD64' and platform_python_implementation == 'CPython' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'ARM64' and platform_python_implementation == 'CPython' and sys_platform == 'win32')",
+    "(python_full_version >= '3.15' and platform_machine != 'AMD64' and platform_machine != 'ARM64' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'AMD64' and platform_python_implementation != 'CPython' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'ARM64' and platform_python_implementation != 'CPython' and sys_platform == 'win32')",
     "python_full_version >= '3.15' and sys_platform == 'emscripten'",
-    "python_full_version >= '3.15' and sys_platform != 'emscripten' and sys_platform != 'win32'",
-    "python_full_version == '3.14.*' and sys_platform == 'win32'",
+    "(python_full_version >= '3.15' and platform_machine == 'aarch64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_python_implementation == 'CPython' and sys_platform == 'darwin')",
+    "(python_full_version >= '3.15' and platform_machine != 'aarch64' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'aarch64' and platform_python_implementation != 'CPython' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and platform_python_implementation != 'CPython' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_python_implementation != 'CPython' and sys_platform == 'darwin') or (python_full_version >= '3.15' and sys_platform != 'darwin' and sys_platform != 'emscripten' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "(python_full_version == '3.14.*' and platform_machine == 'AMD64' and platform_python_implementation == 'CPython' and sys_platform == 'win32') or (python_full_version == '3.14.*' and platform_machine == 'ARM64' and platform_python_implementation == 'CPython' and sys_platform == 'win32')",
+    "(python_full_version == '3.14.*' and platform_machine != 'AMD64' and platform_machine != 'ARM64' and sys_platform == 'win32') or (python_full_version == '3.14.*' and platform_machine == 'AMD64' and platform_python_implementation != 'CPython' and sys_platform == 'win32') or (python_full_version == '3.14.*' and platform_machine == 'ARM64' and platform_python_implementation != 'CPython' and sys_platform == 'win32')",
     "python_full_version == '3.14.*' and sys_platform == 'emscripten'",
-    "python_full_version == '3.14.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
-    "python_full_version == '3.13.*' and sys_platform == 'win32'",
+    "(python_full_version == '3.14.*' and platform_machine == 'aarch64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (python_full_version == '3.14.*' and platform_machine == 'x86_64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (python_full_version == '3.14.*' and platform_python_implementation == 'CPython' and sys_platform == 'darwin')",
+    "(python_full_version == '3.14.*' and platform_machine != 'aarch64' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version == '3.14.*' and platform_machine == 'aarch64' and platform_python_implementation != 'CPython' and sys_platform == 'linux') or (python_full_version == '3.14.*' and platform_machine == 'x86_64' and platform_python_implementation != 'CPython' and sys_platform == 'linux') or (python_full_version == '3.14.*' and platform_python_implementation != 'CPython' and sys_platform == 'darwin') or (python_full_version == '3.14.*' and sys_platform != 'darwin' and sys_platform != 'emscripten' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "(python_full_version == '3.13.*' and platform_machine == 'AMD64' and platform_python_implementation == 'CPython' and sys_platform == 'win32') or (python_full_version == '3.13.*' and platform_machine == 'ARM64' and platform_python_implementation == 'CPython' and sys_platform == 'win32')",
+    "(python_full_version == '3.13.*' and platform_machine != 'AMD64' and platform_machine != 'ARM64' and sys_platform == 'win32') or (python_full_version == '3.13.*' and platform_machine == 'AMD64' and platform_python_implementation != 'CPython' and sys_platform == 'win32') or (python_full_version == '3.13.*' and platform_machine == 'ARM64' and platform_python_implementation != 'CPython' and sys_platform == 'win32')",
     "python_full_version == '3.13.*' and sys_platform == 'emscripten'",
-    "python_full_version == '3.13.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
-    "python_full_version < '3.13' and sys_platform == 'win32'",
+    "(python_full_version == '3.13.*' and platform_machine == 'aarch64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (python_full_version == '3.13.*' and platform_machine == 'x86_64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (python_full_version == '3.13.*' and platform_python_implementation == 'CPython' and sys_platform == 'darwin')",
+    "(python_full_version == '3.13.*' and platform_machine != 'aarch64' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version == '3.13.*' and platform_machine == 'aarch64' and platform_python_implementation != 'CPython' and sys_platform == 'linux') or (python_full_version == '3.13.*' and platform_machine == 'x86_64' and platform_python_implementation != 'CPython' and sys_platform == 'linux') or (python_full_version == '3.13.*' and platform_python_implementation != 'CPython' and sys_platform == 'darwin') or (python_full_version == '3.13.*' and sys_platform != 'darwin' and sys_platform != 'emscripten' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "(python_full_version < '3.13' and platform_machine == 'AMD64' and platform_python_implementation == 'CPython' and sys_platform == 'win32') or (python_full_version < '3.13' and platform_machine == 'ARM64' and platform_python_implementation == 'CPython' and sys_platform == 'win32')",
+    "(python_full_version < '3.13' and platform_machine != 'AMD64' and platform_machine != 'ARM64' and sys_platform == 'win32') or (python_full_version < '3.13' and platform_machine == 'AMD64' and platform_python_implementation != 'CPython' and sys_platform == 'win32') or (python_full_version < '3.13' and platform_machine == 'ARM64' and platform_python_implementation != 'CPython' and sys_platform == 'win32')",
     "python_full_version < '3.13' and sys_platform == 'emscripten'",
-    "python_full_version < '3.13' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "(python_full_version < '3.13' and platform_machine == 'aarch64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (python_full_version < '3.13' and platform_machine == 'x86_64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (python_full_version < '3.13' and platform_python_implementation == 'CPython' and sys_platform == 'darwin')",
+    "(python_full_version < '3.13' and platform_machine != 'aarch64' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version < '3.13' and platform_machine == 'aarch64' and platform_python_implementation != 'CPython' and sys_platform == 'linux') or (python_full_version < '3.13' and platform_machine == 'x86_64' and platform_python_implementation != 'CPython' and sys_platform == 'linux') or (python_full_version < '3.13' and platform_python_implementation != 'CPython' and sys_platform == 'darwin') or (python_full_version < '3.13' and sys_platform != 'darwin' and sys_platform != 'emscripten' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 
 [[package]]
@@ -239,26 +247,28 @@ wheels = [
 
 [[package]]
 name = "arkitekt"
-version = "13.1.0"
+version = "14.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
     { name = "arkitekt-spec" },
     { name = "click" },
     { name = "fakts", extra = ["crypto"] },
+    { name = "fakts", extra = ["mesh"], marker = "(platform_machine == 'aarch64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (platform_machine == 'x86_64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (platform_machine == 'AMD64' and platform_python_implementation == 'CPython' and sys_platform == 'win32') or (platform_machine == 'ARM64' and platform_python_implementation == 'CPython' and sys_platform == 'win32') or (platform_python_implementation == 'CPython' and sys_platform == 'darwin')" },
     { name = "koil" },
     { name = "platformdirs" },
     { name = "py-machineid" },
     { name = "pyyaml" },
     { name = "rath" },
+    { name = "segno" },
     { name = "semver" },
     { name = "typer" },
     { name = "typing-extensions" },
     { name = "watchfiles" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/4c/f5/7fb7f445dc36186f1d39004c8712960a82f905d2d619b48778f1ec653d9e/arkitekt-13.1.0.tar.gz", hash = "sha256:c561c2ed2cb3f363247bd34ebb933965f7a5a1d5a635d6a03a7f0f13e8098f62", size = 201402, upload-time = "2026-11-01T20:27:04.02Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4c/93/e5d53e931445b9359e4ba830f352ffdcd4d7662ddee90aa9cb23d412b663/arkitekt-14.1.0.tar.gz", hash = "sha256:2ee9b4aebc3c57f3c33574afcc13f71fc2cbe7e0493bcb5187da1130da7cbc9f", size = 213999, upload-time = "2026-11-10T15:02:53.331Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/26/ae/9f76a8568b6488dc98e3ad5a4218a6d697e871dae35c56ab317969426e08/arkitekt-13.1.0-py3-none-any.whl", hash = "sha256:41f3c5044833acee229fe24d6a0727718caf1989b2baff584fa7d8a5d39058af", size = 249257, upload-time = "2026-11-01T20:27:02.457Z" },
+    { url = "https://files.pythonhosted.org/packages/1c/a7/4bc20375c2bb17a56d6c79cd78464084f1d04f179a7c7a0eac16d68b7467/arkitekt-14.1.0-py3-none-any.whl", hash = "sha256:7b0c20575326caefc3bcb2481d1d9025135a5367c7bef007dee3fb2f6ab27d6d", size = 265124, upload-time = "2026-11-10T15:02:51.789Z" },
 ]
 
 [package.optional-dependencies]
@@ -273,6 +283,21 @@ all = [
     { name = "mikro" },
     { name = "rekuest" },
     { name = "unlok" },
+]
+
+[[package]]
+name = "arkitekt-mesh"
+version = "0.12.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e8/d6/2040520e973861b895e85ad85b5df17e02a27b341560f46e567d4502781c/arkitekt_mesh-0.12.2.tar.gz", hash = "sha256:b144728a422e062bde9f074a9437a7fb0821e39273f578867c0a4bbf68a3d734", size = 613673, upload-time = "2026-11-06T10:05:10.347Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/91/d0/1871d3bb034f71b346425103e9d13a4b25cf3e1fa2c74a230e5b0365c3a7/arkitekt_mesh-0.12.2-cp39-abi3-macosx_10_12_universal2.macosx_10_12_x86_64.macosx_11_0_arm64.whl", hash = "sha256:baf95040e0991eb6ca66113e80918f260dc997cadd2352fe8b654d869228332e", size = 6567770, upload-time = "2026-11-06T10:04:58.857Z" },
+    { url = "https://files.pythonhosted.org/packages/36/f9/0be1b1423b12d85748900a71304b6ec19e2e80c3ddeac47c6beecdf3db24/arkitekt_mesh-0.12.2-cp39-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:1c3a9cdbce117e5f184b7f2e7bf1ff036e1d272d65ecdb160d9415f248af0dbb", size = 3690535, upload-time = "2026-11-06T10:05:00.761Z" },
+    { url = "https://files.pythonhosted.org/packages/1c/d7/7111ee859527fb07d22f635d7bb55f0e8e3a5cb939022a4e6d8aaaaa8bda/arkitekt_mesh-0.12.2-cp39-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:87b51eecbe22af9426fa36d1797272d32881901505b1a49994c9ae78413ccd48", size = 3644679, upload-time = "2026-11-06T10:05:02.518Z" },
+    { url = "https://files.pythonhosted.org/packages/d2/dc/3b7961cf6c78881efe8c989c6977c333d7c0d44fd281967b2698818c99c1/arkitekt_mesh-0.12.2-cp39-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:f251c24bdcb86e8bd87e71745d86b227643b16af8ca202010e780e06849cc4f8", size = 3866694, upload-time = "2026-11-06T10:05:04.05Z" },
+    { url = "https://files.pythonhosted.org/packages/f1/8a/21c00ff3ca0b272b8ddf0330080a46446a98c0bb085bcbc55bbc68b9bb7c/arkitekt_mesh-0.12.2-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:87d345cf8b540cfef7894dc701affe09e6fa593defb2fa9199f09ee990dad1a3", size = 3962436, upload-time = "2026-11-06T10:05:05.48Z" },
+    { url = "https://files.pythonhosted.org/packages/b1/a6/cf0e7addfc67b2119b1bc08aa73e0ae57a294983dbf61c85b05282b0b057/arkitekt_mesh-0.12.2-cp39-abi3-win_amd64.whl", hash = "sha256:7a4392bbd3ed252ce420d3820afb24b6f34ce319a9f349685ed27e15bdf4920e", size = 3100338, upload-time = "2026-11-06T10:05:07.223Z" },
+    { url = "https://files.pythonhosted.org/packages/13/d4/8fdfc110291763150d714646dbf837175fb54be05d0e3ca516506e35a925/arkitekt_mesh-0.12.2-cp39-abi3-win_arm64.whl", hash = "sha256:ba5b9913e4bd7a7fcab35103063cbe51959dc1b8b6f80770082f52b67da12f60", size = 2900257, upload-time = "2026-11-06T10:05:08.79Z" },
 ]
 
 [[package]]
@@ -587,7 +612,7 @@ wheels = [
 
 [[package]]
 name = "fakts"
-version = "6.1.0"
+version = "6.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -596,14 +621,17 @@ dependencies = [
     { name = "koil" },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/10/a4/acfaef26965e8d6452cb627b09b017c4aa2abfcbc144d08ffea275973290/fakts-6.1.0.tar.gz", hash = "sha256:9e1612ecb436cee7384e1f52c0ac0be62fe12c56a9d07047f13aa50af7603ac3", size = 108357, upload-time = "2026-10-23T18:31:51.01Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/85/4e/cfa5916b24c8a5001890bf61ee68fc77804ef80903417f67ceb56678557f/fakts-6.3.0.tar.gz", hash = "sha256:1e9dd00c089ac86ac96263f5f7414796ba9dc96fd18b76fb583e617b10bf3b41", size = 110725, upload-time = "2026-11-07T19:56:49.299Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c8/3a/b0421744a9dadaed6f2965502093d95603ac39775fa00b9754bae251fcf5/fakts-6.1.0-py3-none-any.whl", hash = "sha256:1fc7827bbc6490d5e06a96f86d9bbb49c441635c5e5c451654aa2b85f975d187", size = 115281, upload-time = "2026-10-23T18:31:49.532Z" },
+    { url = "https://files.pythonhosted.org/packages/00/e7/31616180e600a520390b241bf22aa39d49d7161aee09f41363934185fdaa/fakts-6.3.0-py3-none-any.whl", hash = "sha256:1e89985d710392bebfecb8d00416b3c12b70dd9a41ad95725baf919ae7f2163d", size = 117648, upload-time = "2026-11-07T19:56:48.105Z" },
 ]
 
 [package.optional-dependencies]
 crypto = [
     { name = "cryptography" },
+]
+mesh = [
+    { name = "arkitekt-mesh" },
 ]
 
 [[package]]
@@ -984,7 +1012,7 @@ wheels = [
 
 [[package]]
 name = "mikro"
-version = "12.3.0"
+version = "13.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "arkitekt-spec" },
@@ -996,12 +1024,11 @@ dependencies = [
     { name = "obstore" },
     { name = "rath" },
     { name = "websockets" },
-    { name = "xarray" },
     { name = "zarr" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/92/6b/7389d7da2928b6e37ca01b57efa0740ee926420a30b42b818f66c9462dba/mikro-12.3.0.tar.gz", hash = "sha256:4c9023babe923c6c84272b4c66fbe1a9947b71dab8636ba0a0f485570586ccad", size = 482699, upload-time = "2026-11-03T10:54:27.202Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/5b/e9/f366bdc8401e951ee68382f08af3b15e832bdda7f70d1b98b526abc7de53/mikro-13.1.0.tar.gz", hash = "sha256:54054685d71a3801d2b1ba80e0069d344378631a082ca9140828339836fbcdd3", size = 523996, upload-time = "2026-11-10T15:52:34.472Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0c/8e/5c78bc67e435d17c9067ec0b4a23552d736c21d243429c46894dd5753955/mikro-12.3.0-py3-none-any.whl", hash = "sha256:1de16c8bf7ff954eaa9bfc0edf1ef9d06340b88ba9dccefe27f0cbe3091e16eb", size = 500953, upload-time = "2026-11-03T10:54:25.688Z" },
+    { url = "https://files.pythonhosted.org/packages/b1/ab/332e4fa19b01dfdd762262b9b5ed32d216ce093cfb8a8ffcbd658169e212/mikro-13.1.0-py3-none-any.whl", hash = "sha256:6671a9b28dd0886a542208133c091a2d0895cef16b0000682e25cf86962cf9c7", size = 543259, upload-time = "2026-11-10T15:52:32.601Z" },
 ]
 
 [[package]]
@@ -1249,10 +1276,10 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "arkitekt", extras = ["all"], specifier = ">=13.1.0" },
+    { name = "arkitekt", extras = ["all"], specifier = ">=14.1.0" },
     { name = "dask", extras = ["array"], specifier = ">=2026.8.0" },
     { name = "kanne", specifier = ">=2.6.0" },
-    { name = "mikro", specifier = ">=12.1.0" },
+    { name = "mikro", specifier = ">=13.1.0" },
     { name = "nd2", specifier = ">=0.12,<0.13" },
     { name = "numpy", specifier = ">=2.5.4" },
     { name = "xarray", specifier = ">=2026.9.0" },
@@ -1968,6 +1995,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/c0/8f/0722ca900cc807c13a6a0c696dacf35430f72e0ec571c4275d2371fca3e9/rich-15.0.0.tar.gz", hash = "sha256:edd07a4824c6b40189fb7ac9bc4c52536e9780fbbfbddf6f1e2502c31b068c36", size = 230680, upload-time = "2026-04-12T08:24:00.75Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl", hash = "sha256:33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb", size = 310654, upload-time = "2026-04-12T08:24:02.83Z" },
+]
+
+[[package]]
+name = "segno"
+version = "1.6.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1c/2e/b396f750c53f570055bf5a9fc1ace09bed2dff013c73b7afec5702a581ba/segno-1.6.6.tar.gz", hash = "sha256:e60933afc4b52137d323a4434c8340e0ce1e58cec71439e46680d4db188f11b3", size = 1628586, upload-time = "2025-03-12T22:12:53.324Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d6/02/12c73fd423eb9577b97fc1924966b929eff7074ae6b2e15dd3d30cb9e4ae/segno-1.6.6-py3-none-any.whl", hash = "sha256:28c7d081ed0cf935e0411293a465efd4d500704072cdb039778a2ab8736190c7", size = 76503, upload-time = "2025-03-12T22:12:48.106Z" },
 ]
 
 [[package]]

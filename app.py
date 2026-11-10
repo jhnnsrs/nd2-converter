@@ -43,15 +43,13 @@ import tempfile
 import zlib
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
-from typing import Any
+from typing import Annotated, Any
 
 import numpy as np
 import xarray as xr
-
-from arkitekt import App, Task, run
+from arkitekt import App, DescriptorOperator, Requires, Task, run
 from mikro import Mikro, build_pyramid, canonical, mikro_service, scales_from, space_3d
 from mikro.api.schema import (
-    PlacementValidity,
     AcquisitionWindowInput,
     ArrayDataset,
     AxisAnchorInput,
@@ -63,6 +61,7 @@ from mikro.api.schema import (
     LabelInput,
     OmeMetadataInput,
     OptikitStateInput,
+    PlacementValidity,
     PreferredView,
     ProjectionMode,
     Scene,
@@ -71,6 +70,7 @@ from mikro.api.schema import (
     ValueHistogramInput,
     ValueRelation,
 )
+from mikro.arkitekt.specs import EXTENSION
 from mikro.inputs.render import (
     RGB_PRIMARIES,
     color_for_wavelength,
@@ -1582,7 +1582,7 @@ def stage_points(
     logo=logo_of("convert_nd2_file_to_datasets"),
 )
 def convert_nd2_file_to_datasets(
-    file: File,
+    file: Annotated[File, Requires(key=EXTENSION, operator=DescriptorOperator.IN, value=["nd2"])],
     mikro: Mikro,
     task: Task,
     levels: int = 0,

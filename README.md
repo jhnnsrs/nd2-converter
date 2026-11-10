@@ -1,5 +1,9 @@
 # nd2-converter
 
+<!-- arkitekt:badge -->
+[![Open in Arkitekt](https://arkitekt.live/img/badge/open-in-arkitekt.svg)](https://arkitekt.live/deeplink?orkestrator=%2Fdo%2Fv1%2Frepo.install%3Fsource%3Doci%253Aghcr.io%252Fjhnnsrs%252Fnd2-converter)
+<!-- /arkitekt:badge -->
+
 Converts Nikon ND2 files into mikro datasets **natively**: no Bio-Formats, no JVM, no
 OME in between. One pyramided `ArrayDataset` per stage position.
 
