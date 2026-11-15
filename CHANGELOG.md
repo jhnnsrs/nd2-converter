@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.4 (2026-11-15)
+
+### Bug Fixes
+
+- **deps**: Arkitekt 17 and arkitekt-spec 11
+  ([`a7e8c05`](https://github.com/jhnnsrs/nd2-converter/commit/a7e8c05784765b2db28f436236ca1b1f68a9af27))
+
+
 ## v0.1.3 (2026-11-15)
 
 ### Bug Fixes
