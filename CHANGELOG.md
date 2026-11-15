@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.1 (2026-11-15)
+
+### Bug Fixes
+
+- **deps**: Arkitekt 16, on agent protocol 2
+  ([`f7141bf`](https://github.com/jhnnsrs/nd2-converter/commit/f7141bf3b679d6610788436845ef90f931be266a))
+
+
 ## v0.1.0 (2026-11-10)
 
 ### Features
