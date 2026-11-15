@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.3 (2026-11-15)
+
+### Bug Fixes
+
+- **deps**: Rekuest 15.0.1 and arkitekt-runtime 10.0.1
+  ([`36284f4`](https://github.com/jhnnsrs/nd2-converter/commit/36284f403eb857774ee775fd0ac12edd7e08efc7))
+
+
 ## v0.1.2 (2026-11-15)
 
 ### Bug Fixes
