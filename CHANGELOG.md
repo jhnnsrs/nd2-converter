@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.2 (2026-11-15)
+
+### Bug Fixes
+
+- Release an image built on arkitekt 16
+  ([`42a6a37`](https://github.com/jhnnsrs/nd2-converter/commit/42a6a37ab9cc77112c7c559b32c0efe87efafee5))
+
+
 ## v0.1.1 (2026-11-15)
 
 ### Bug Fixes
