@@ -5,7 +5,7 @@ description = "Converts Nikon ND2 files into mikro datasets natively, with Nikon
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "arkitekt[all]>=17.0.1",
+    "arkitekt[all]>=18",
     "dask[array]>=2026.8.0",
     "kanne>=2.6.0",
     "mikro>=13.1.0",
