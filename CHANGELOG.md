@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.1.5 (2026-11-16)
+
+### Bug Fixes
+
+- Bloks are self-contained <Blok kind context> trees
+  ([`c1177f6`](https://github.com/jhnnsrs/nd2-converter/commit/c1177f6873a518c18fef613fd2eb9e8693e9f42d))
+
+### Build System
+
+- Lock arkitekt 18
+  ([`714602b`](https://github.com/jhnnsrs/nd2-converter/commit/714602bc64d370e8871596a0fbbd56b69fd2e5d2))
+
+
 ## v0.1.4 (2026-11-15)
 
 ### Bug Fixes
