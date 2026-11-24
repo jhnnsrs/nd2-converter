@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.6 (2026-11-24)
+
+### Bug Fixes
+
+- Build on arkitekt 18.5.2, rekuest 18, arkitekt-spec 13 and mikro 14.2
+  ([`a3def65`](https://github.com/jhnnsrs/nd2-converter/commit/a3def6510355df09fdd2a464438d754f7728a891))
+
+
 ## v0.1.5 (2026-11-16)
 
 ### Bug Fixes
