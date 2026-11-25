@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.1.7 (2026-11-25)
+
+### Bug Fixes
+
+- Runs on arkitekt 19
+  ([`e0bcbd6`](https://github.com/jhnnsrs/nd2-converter/commit/e0bcbd6e1b33287c54d78ead4f44c6293dc56639))
+
+
 ## v0.1.6 (2026-11-24)
 
 ### Bug Fixes
