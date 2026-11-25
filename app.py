@@ -48,7 +48,7 @@ from typing import Annotated, Any
 import numpy as np
 import xarray as xr
 from arkitekt import App, DescriptorOperator, Requires, Task, run
-from mikro import Mikro, build_pyramid, canonical, mikro_service, scales_from, space_3d
+from mikro import Mikro, build_pyramid, canonical, scales_from, space_3d
 from mikro.api.schema import (
     AcquisitionWindowInput,
     ArrayDataset,
@@ -115,7 +115,6 @@ app = App(
     ),
     author="jhnnsrs",
 )
-app.service(mikro_service)
 declare_logos(app)
 
 

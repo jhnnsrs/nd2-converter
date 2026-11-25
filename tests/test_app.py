@@ -370,7 +370,7 @@ def test_a_composed_scene_is_each_datasets_default():
 
 def test_the_app_declares_its_action():
     """One action, taking a mikro file and handed a mikro client."""
-    assert M.app.services == ["mikro"]
+    assert list(M.app.registry.clients) == ["mikro"]
     declaration = M.app.registry.to_implement_agent_input().model_dump(
         mode="json", exclude_none=True
     )
